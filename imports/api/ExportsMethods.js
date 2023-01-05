@@ -16,7 +16,7 @@ Meteor.methods({
     });
 
     const runExport = () => {
-      if (ExportsCollection.findOne({ _id: inserted }).progress !== 100) {
+      if (ExportsCollection.findOne({ _id: inserted })?.progress !== 100) {
         setTimeout(async () => {
           ExportsCollection.update(inserted, { $inc: { progress: 5 } });
           runExport();
