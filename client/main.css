@@ -1,0 +1,36 @@
+body {
+  padding: 10px;
+  font-family: sans-serif;
+}
+
+body h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.export {
+  margin-top: 1rem;
+}
+
+#exportBtn {
+  background-color: #e04e4b;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.deleteBtn {
+  background-color: transparent;
+  color: red;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.url {
+  vertical-align: text;
+}

@@ -1,0 +1,38 @@
+<head>
+  <title>Lemexport</title>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, height=device-height, viewport-fit=cover, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+  />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+</head>
+
+<body>
+  <h1>Welcome to Lemexport!</h1>
+
+  {{> exports}}
+</body>
+
+<template name="exports">
+  <button id="exportBtn">Exporter</button>
+
+  {{#if getExports.length}}
+  <h3>Liste des export :</h3>
+  {{#each getExports}} {{> export}} {{/each}} {{/if}}
+</template>
+
+<template name="export">
+  <div class="export">
+    <button class="deleteBtn">&times;</button>
+    {{#if isCompleted}}
+    <span class="url">{{url}}</span>
+    {{else}}
+    <progress value="{{progress}}" max="100"></progress>
+    <span>{{progress}}</span>
+    {{/if}}
+  </div>
+</template>
