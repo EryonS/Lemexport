@@ -1,0 +1,7 @@
+<template name="exports">
+  <button id="exportBtn">Exporter</button>
+
+  {{#if getExports.length}}
+  <h3>Liste des export :</h3>
+  {{#each getExports}} {{> export}} {{/each}} {{/if}}
+</template>
